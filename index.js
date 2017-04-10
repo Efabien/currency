@@ -2,7 +2,8 @@
 var express = require('express');
 var bodyParser = require('body-parser')
 var controler=require('./my_modules/controler');
-var token = "EAABxRbN8vTkBAJ7qRAH3qijk5AtUDRftoid6I3NFhXZApnbZCcdKKOTBen5iWxcZBgUFxx1AsVHbefc5FaA1AtKDbzDZBj78xTd7Cp5k2ekUpk2EZARS0FdsueXRZCNaA5ES9RsaSToAwbkaDDMroaeXD3lFLpq6GrCeCZAW4MfVgZDZD"
+
+var token = process.env.token;
 var fb=require('./my_modules/fb')();
 fb.init(token);
 var currency=require('./my_modules/apiCall/currency')
