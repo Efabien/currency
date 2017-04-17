@@ -1,12 +1,5 @@
-	var redis=require('redis');
-	var client=redis.createClient();
-
-	client.on('connect', function() {
-			console.log('connected to redis');
-	});
-	client.on('error',function(err){
-		console.log('redis error '+err);
-	});
+var db=require('./db.js');
+var client=db.client;
 Array.prototype.last=function(){
 	var tab=this;
 	return tab[tab.length-1];

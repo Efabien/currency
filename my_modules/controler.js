@@ -14,6 +14,8 @@ var Controler=function(){
         self.emit('postback',sender,event.postback)//untested
       }else if(event.message && event.message.quick_reply){
         self.emit('quick_reply',sender,event.message.quick_reply)//untested
+      }else if(event.delivery){
+        self.emit('delivery',sender,event.delivery.watermark)
       }
     }
   }
